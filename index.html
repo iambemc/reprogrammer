@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Architect | Identity Reprogrammer</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Space Grotesk', sans-serif; }
+        .orbitron { font-family: 'Orbitron', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%); }
+        .glow-text { text-shadow: 0 0 20px rgba(139, 92, 246, 0.8); }
+        .install-animation { animation: slideIn 0.5s ease-out forwards; opacity: 0; }
+        @keyframes slideIn { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen text-white p-4 md:p-8">
+    <div class="max-w-6xl mx-auto">
+        <header class="text-center mb-12">
+            <h1 class="orbitron text-4xl md:text-6xl font-bold mb-4 tracking-tighter glow-text uppercase">System Reprogrammer</h1>
+            <div class="flex items-center justify-center space-x-2 text-violet-400 orbitron text-xs">
+                <span class="animate-pulse">●</span>
+                <span>NEURAL ARCHITECT v4.0</span>
+            </div>
+        </header>
+
+        <div class="flex justify-between mb-12 max-w-2xl mx-auto relative">
+            <div class="absolute top-1/2 left-0 w-full h-0.5 bg-violet-900/50 -translate-y-1/2 z-0"></div>
+            <div id="step1" class="z-10 bg-violet-600 w-10 h-10 rounded-full flex items-center justify-center font-bold border-4 border-[#0f0c29]">1</div>
+            <div id="step2" class="z-10 bg-slate-800 w-10 h-10 rounded-full flex items-center justify-center font-bold border-4 border-[#0f0c29]">2</div>
+            <div id="step3" class="z-10 bg-slate-800 w-10 h-10 rounded-full flex items-center justify-center font-bold border-4 border-[#0f0c29]">3</div>
+            <div id="step4" class="z-10 bg-slate-800 w-10 h-10 rounded-full flex items-center justify-center font-bold border-4 border-[#0f0c29]">4</div>
+        </div>
+
+        <div id="phase1" class="max-w-3xl mx-auto space-y-6">
+            <div class="bg-black/40 backdrop-blur-xl p-8 rounded-3xl border border-violet-500/30 shadow-2xl">
+                <h2 class="orbitron text-xl font-bold mb-4 text-violet-300">INITIALIZE IDEAL IDENTITY</h2>
+                <textarea id="idealSelf" class="w-full bg-slate-900/50 border border-violet-500/20 rounded-2xl p-6 text-lg focus:ring-2 focus:ring-violet-500 outline-none transition-all h-48" placeholder="Describe your professional ideal self (e.g., 'A systems architect managing technical builds and legal risk')..."></textarea>
+                <button id="startDeconstruction" class="w-full mt-6 bg-violet-600 hover:bg-violet-500 text-white font-bold py-4 rounded-2xl transition-all transform hover:scale-[1.02] orbitron tracking-widest">
+                    BEGIN DECONSTRUCTION
+                </button>
+            </div>
+        </div>
+
+        <div id="phase2" class="hidden max-w-3xl mx-auto text-center space-y-8">
+            <div class="bg-black/40 p-12 rounded-3xl border border-violet-500/30">
+                <div class="inline-block animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-violet-500 mb-6"></div>
+                <h2 class="orbitron text-2xl font-bold mb-2 uppercase">Analyzing Neural Patterns</h2>
+                <p id="typingOutput" class="text-violet-400 font-mono italic"></p>
+            </div>
+        </div>
+
+        <div id="phase3" class="hidden max-w-3xl mx-auto text-center space-y-8">
+            <div class="bg-black/40 p-12 rounded-3xl border border-violet-500/30">
+                <h2 class="orbitron text-2xl font-bold mb-6 italic text-violet-200 uppercase">Installing Core Protocols</h2>
+                <div class="w-full bg-slate-800 rounded-full h-4 mb-4 overflow-hidden">
+                    <div id="installBar" class="bg-gradient-to-r from-violet-600 to-fuchsia-500 h-full w-0 transition-all duration-300"></div>
+                </div>
+                <p id="installPercent" class="orbitron text-xl font-bold text-violet-400">0%</p>
+            </div>
+        </div>
+
+        <div id="phase4" class="hidden space-y-8">
+            <div id="blueprintCapture" class="grid grid-cols-1 lg:grid-cols-2 gap-8 bg-black/20 p-6 rounded-3xl">
+                <div class="lg:col-span-2 bg-gradient-to-r from-violet-900/40 to-indigo-900/40 p-8 rounded-3xl border border-violet-500/30">
+                    <h2 class="orbitron text-2xl font-bold mb-4 text-violet-300 text-center uppercase tracking-tighter">Master Identity Architecture</h2>
+                    <div id="selfImageList" class="space-y-3"></div>
+                </div>
+
+                <div class="bg-slate-900/60 p-6 rounded-3xl border border-violet-500/20">
+                    <h3 class="orbitron font-bold text-violet-400 mb-4 flex items-center">🧠 NEURAL LOGIC</h3>
+                    <div id="thoughtList" class="space-y-4"></div>
+                </div>
+
+                <div class="bg-slate-900/60 p-6 rounded-3xl border border-violet-500/20">
+                    <h3 class="orbitron font-bold text-emerald-400 mb-4 flex items-center">⚡ BEHAVIOR MAP</h3>
+                    <div id="behaviorList" class="space-y-4"></div>
+                </div>
+
+                <div class="lg:col-span-2 bg-gradient-to-r from-red-900/30 to-orange-900/30 p-8 rounded-3xl border border-red-500/20">
+                    <h3 class="orbitron font-bold text-center text-red-300 mb-6">⚠️ SYSTEM RISK MITIGATION</h3>
+                    <div id="riskAssessment" class="grid grid-cols-1 md:grid-cols-3 gap-4"></div>
+                </div>
+
+                <div class="lg:col-span-2 bg-slate-900/60 p-6 rounded-3xl border border-violet-500/20 text-center">
+                    <h3 class="orbitron font-bold text-violet-400 mb-6 uppercase">Immediate Execution Protocol</h3>
+                    <div id="actionSteps" class="grid md:grid-cols-3 gap-6"></div>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-center gap-4 mt-8 pb-12">
+                <button id="projectHelp" class="bg-gradient-to-r from-violet-600 to-indigo-600 text-white font-bold py-3 px-8 rounded-xl transition-all transform hover:scale-105 orbitron border border-violet-400/50">
+                    REQUEST PROJECT ASSISTANCE
+                </button>
+                <button id="downloadPDF" class="bg-slate-800 border border-emerald-500/50 text-white font-bold py-3 px-8 rounded-xl transition-all transform hover:scale-105 orbitron">
+                    EXPORT PDF
+                </button>
+                <button id="restart" class="bg-black/40 border border-slate-500/50 text-white font-bold py-3 px-8 rounded-xl transition-all transform hover:scale-105 orbitron">
+                    NEW START
+                </button>
+            </div>
+        </div>
+
+        <div id="contactModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+            <div class="bg-slate-900 border border-violet-500/30 p-8 rounded-3xl max-w-md w-full shadow-2xl">
+                <h3 class="orbitron text-xl font-bold mb-2 text-violet-300 uppercase">Secure Connect</h3>
+                <p class="text-gray-400 text-sm mb-6">Transmit your project details to Zoho CRM for review.</p>
+                <div class="space-y-4">
+                    <div class="grid grid-cols-2 gap-3">
+                        <input type="text" id="firstName" placeholder="First Name" class="bg-black/40 border border-violet-500/20 rounded-xl p-3 outline-none focus:border-violet-500 text-sm text-white">
+                        <input type="text" id="lastName" placeholder="Last Name" class="bg-black/40 border border-violet-500/20 rounded-xl p-3 outline-none focus:border-violet-500 text-sm text-white">
+                    </div>
+                    <input type="email" id="userEmail" placeholder="Email Address" class="w-full bg-black/40 border border-violet-500/20 rounded-xl p-3 outline-none focus:border-violet-500 text-sm text-white">
+                    <input type="tel" id="userPhone" placeholder="Phone Number" class="w-full bg-black/40 border border-violet-500/20 rounded-xl p-3 outline-none focus:border-violet-500 text-sm text-white">
+                    <textarea id="userMsg" placeholder="Any specific notes or questions?" class="w-full bg-black/40 border border-violet-500/20 rounded-xl p-3 outline-none focus:border-violet-500 h-24 text-sm text-white"></textarea>
+                    
+                    <div class="flex items-center space-x-2 p-2">
+                        <input type="checkbox" id="userUrgent" class="w-4 h-4 rounded border-gray-300 text-violet-600">
+                        <label for="userUrgent" class="text-xs text-red-400 font-bold uppercase tracking-widest">Urgent Assistance</label>
+                    </div>
+
+                    <div class="flex gap-3 mt-4">
+                        <button id="submitToZoho" class="flex-1 bg-violet-600 hover:bg-violet-500 text-white font-bold py-3 rounded-xl orbitron text-xs tracking-widest transition-all">SEND TO ZOHO</button>
+                        <button id="closeModal" class="px-6 py-3 border border-slate-700 rounded-xl text-gray-400 text-xs orbitron">CANCEL</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const traitLibrary = {
+            litigation: {
+                thoughts: ["I operate with legal precision", "Documentation is my greatest defense", "I anticipate risks before liabilities"],
+                behaviors: ["I record all communications", "I audit contracts carefully", "I consult experts for high-stakes moves"]
+            },
+            technical: {
+                thoughts: ["Systems must be scalable", "Stability and security are priorities", "Simplify complexity always"],
+                behaviors: ["I map architecture first", "I prioritize data integrity", "I document tech stacks clearly"]
+            },
+            executive: {
+                thoughts: ["My time is a high-value asset", "I speak with the authority of results", "Decisiveness is key"],
+                behaviors: ["I set clear availability boundaries", "I lead results-oriented meetings", "I delegate non-expert tasks"]
+            }
+        };
+
+        const riskLibrary = {
+            technical: ["Single point of failure detected", "Scope creep likely", "Legacy system mismatch"],
+            legal: ["Ambiguous contract language", "Weak communication trail", "Regulatory non-compliance"],
+            operational: ["Budget/Goal misalignment", "Insufficient deep work time", "Vendor volatility"]
+        };
+
+        const updateProgress = (s) => {
+            for(let i=1; i<=4; i++) {
+                const el = document.getElementById(`step${i}`);
+                el.classList.replace(i <= s ? 'bg-slate-800' : 'bg-violet-600', i <= s ? 'bg-violet-600' : 'bg-slate-800');
+            }
+        };
+
+        const shuffle = (a) => a.sort(() => Math.random() - 0.5);
+
+        document.getElementById('startDeconstruction').addEventListener('click', () => {
+            if (!document.getElementById('idealSelf').value) return;
+            document.getElementById('phase1').classList.add('hidden');
+            document.getElementById('phase2').classList.remove('hidden');
+            updateProgress(2);
+            let i = 0;
+            const msgs = ["SCANNING INPUT...", "MAPPING ARCHITECTURE...", "OPTIMIZING PROTOCOLS..."];
+            const int = setInterval(() => {
+                document.getElementById('typingOutput').textContent = msgs[i++];
+                if(i === msgs.length) { clearInterval(int); setTimeout(runInstall, 800); }
+            }, 800);
+        });
+
+        function runInstall() {
+            document.getElementById('phase2').classList.add('hidden');
+            document.getElementById('phase3').classList.remove('hidden');
+            updateProgress(3);
+            let p = 0;
+            const int = setInterval(() => {
+                p += 5;
+                document.getElementById('installBar').style.width = p + '%';
+                document.getElementById('installPercent').textContent = p + '%';
+                if(p >= 100) { clearInterval(int); setTimeout(showFinal, 500); }
+            }, 50);
+        }
+
+        function showFinal() {
+            const input = document.getElementById('idealSelf').value.toLowerCase();
+            document.getElementById('phase3').classList.add('hidden');
+            document.getElementById('phase4').classList.remove('hidden');
+            updateProgress(4);
+
+            let th = ["Focus on ROI", "Systemic thinking", "Long-term strategy"];
+            let bh = ["Audit daily progress", "Optimize workflow", "Verify results"];
+            let cats = ['operational'];
+
+            if(input.match(/legal|law|litigation/)) { th.push(...traitLibrary.litigation.thoughts); bh.push(...traitLibrary.litigation.behaviors); cats.push('legal'); }
+            if(input.match(/tech|code|system/)) { th.push(...traitLibrary.technical.thoughts); bh.push(...traitLibrary.technical.behaviors); cats.push('technical'); }
+
+            const pop = (id, items) => {
+                const el = document.getElementById(id);
+                el.innerHTML = '';
+                items.forEach((item) => {
+                    const d = document.createElement('div');
+                    d.className = 'bg-slate-800/40 p-3 rounded-lg border border-violet-500/10 text-sm install-animation';
+                    d.innerHTML = `<span class="text-violet-500 mr-2">›</span>${item}`;
+                    el.appendChild(d);
+                });
+            };
+
+            pop('selfImageList', ["The Elite Architect", "Master of Systems", "Strategic Lead"]);
+            pop('thoughtList', shuffle(th).slice(0, 5));
+            pop('behaviorList', shuffle(bh).slice(0, 5));
+
+            const rc = document.getElementById('riskAssessment');
+            rc.innerHTML = '';
+            cats.forEach(c => riskLibrary[c].forEach(r => {
+                const d = document.createElement('div');
+                d.className = 'bg-black/40 border border-red-500/20 p-3 text-xs rounded-lg install-animation';
+                d.innerHTML = `<b class="text-red-400 block uppercase mb-1">${c}</b>${r}`;
+                rc.appendChild(d);
+            }));
+
+            const ac = document.getElementById('actionSteps');
+            ac.innerHTML = '';
+            ["Morning Audit", "Deep Work Block", "Evening Review"].forEach(t => {
+                const d = document.createElement('div');
+                d.className = 'bg-violet-900/20 border border-violet-500/20 p-4 rounded-xl install-animation';
+                d.innerHTML = `<b class="text-violet-400 block mb-1 uppercase text-xs">${t}</b><p class="text-xs text-gray-400 italic">Execute mission critical tasks.</p>`;
+                ac.appendChild(d);
+            });
+        }
+
+        // Zoho CRM Logic
+        const modal = document.getElementById('contactModal');
+        document.getElementById('projectHelp').addEventListener('click', () => modal.classList.remove('hidden'));
+        document.getElementById('closeModal').addEventListener('click', () => modal.classList.add('hidden'));
+
+        document.getElementById('submitToZoho').addEventListener('click', function() {
+            const btn = this;
+            const architecture = document.getElementById('idealSelf').value;
+            const message = document.getElementById('userMsg').value;
+            const isUrgent = document.getElementById('userUrgent').checked ? "[URGENT] " : "";
+            
+            const formData = new FormData();
+            formData.append('xnQsjsdp', 'YOUR_ZOHO_FORM_ID'); // PASTE FROM ZOHO
+            formData.append('xmqy5ts', 'YOUR_ZOHO_ORG_ID');   // PASTE FROM ZOHO
+            formData.append('actionType', 'TGVhZHM='); 
+
+            formData.append('First Name', document.getElementById('firstName').value);
+            formData.append('Last Name', document.getElementById('lastName').value);
+            formData.append('Email', document.getElementById('userEmail').value);
+            formData.append('Phone', document.getElementById('userPhone').value);
+            formData.append('Company', 'Individual');
+            formData.append('Description', `${isUrgent}ARCHITECTURE: ${architecture} \n\nNOTES: ${message}`);
+
+            btn.textContent = "TRANSMITTING...";
+            btn.disabled = true;
+
+            fetch('https://crm.zoho.com/crm/WebToLeadForm', {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors' 
+            }).then(() => {
+                alert("Protocol successful. Signal synced with Zoho CRM.");
+                location.reload();
+            });
+        });
+
+        document.getElementById('downloadPDF').addEventListener('click', () => {
+            html2pdf().from(document.getElementById('blueprintCapture')).save();
+        });
+        document.getElementById('restart').addEventListener('click', () => location.reload());
+    </script>
+</body>
+</html>
