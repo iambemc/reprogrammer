@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scanista | Identity Reprogrammer</title>
+    <title>Professional Architect | Identity Reprogrammer</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
@@ -24,249 +24,83 @@
         </div>
 
         <header class="text-center mb-12">
-            <h1 class="orbitron text-4xl md:text-5xl font-bold mb-2 tracking-tighter glow-text uppercase">System Reprogrammer</h1>
-            <p class="text-violet-400 orbitron text-[10px] tracking-[0.3em]">NEURAL ARCHITECT v5.0 // POWERED BY SCANISTA</p>
+            <h1 class="orbitron text-4xl md:text-6xl font-bold mb-4 tracking-tighter glow-text uppercase">System Reprogrammer</h1>
+            <div class="flex items-center justify-center space-x-2 text-violet-400 orbitron text-xs">
+                <span class="animate-pulse">●</span>
+                <span>NEURAL ARCHITECT v5.0 // POWERED BY SCANISTA</span>
+            </div>
         </header>
 
-        <div class="flex justify-between mb-12 max-w-xl mx-auto relative">
+        <div class="flex justify-between mb-12 max-w-2xl mx-auto relative">
             <div class="absolute top-1/2 left-0 w-full h-0.5 bg-violet-900/50 -translate-y-1/2 z-0"></div>
-            <div id="step1" class="z-10 bg-violet-600 w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold border-2 border-[#0f0c29]">1</div>
-            <div id="step2" class="z-10 bg-slate-800 w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold border-2 border-[#0f0c29]">2</div>
-            <div id="step3" class="z-10 bg-slate-800 w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold border-2 border-[#0f0c29]">3</div>
-            <div id="step4" class="z-10 bg-slate-800 w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold border-2 border-[#0f0c29]">4</div>
+            <div id="step1" class="z-10 bg-violet-600 w-10 h-10 rounded-full flex items-center justify-center font-bold border-4 border-[#0f0c29]">1</div>
+            <div id="step2" class="z-10 bg-slate-800 w-10 h-10 rounded-full flex items-center justify-center font-bold border-4 border-[#0f0c29]">2</div>
+            <div id="step3" class="z-10 bg-slate-800 w-10 h-10 rounded-full flex items-center justify-center font-bold border-4 border-[#0f0c29]">3</div>
+            <div id="step4" class="z-10 bg-slate-800 w-10 h-10 rounded-full flex items-center justify-center font-bold border-4 border-[#0f0c29]">4</div>
         </div>
 
-        <div id="phase1" class="max-w-3xl mx-auto">
+        <div id="phase1" class="max-w-3xl mx-auto space-y-6">
             <div class="bg-black/40 backdrop-blur-xl p-8 rounded-3xl border border-violet-500/30 shadow-2xl">
-                <h2 class="orbitron text-lg font-bold mb-4 text-violet-300">INITIALIZE IDEAL IDENTITY</h2>
-                <textarea id="idealSelf" class="w-full bg-slate-900/50 border border-violet-500/20 rounded-2xl p-6 text-lg focus:ring-2 focus:ring-violet-500 outline-none transition-all h-48" placeholder="Describe your professional ideal self..."></textarea>
-                <button id="startDeconstruction" class="w-full mt-6 bg-violet-600 hover:bg-violet-500 text-white font-bold py-4 rounded-2xl transition-all transform hover:scale-[1.01] orbitron tracking-[0.2em]">
+                <h2 class="orbitron text-xl font-bold mb-4 text-violet-300">INITIALIZE IDEAL IDENTITY</h2>
+                <textarea id="idealSelf" class="w-full bg-slate-900/50 border border-violet-500/20 rounded-2xl p-6 text-lg focus:ring-2 focus:ring-violet-500 outline-none transition-all h-48" placeholder="Describe your professional ideal self (e.g., 'A systems architect managing technical builds and legal risk')..."></textarea>
+                <button id="startDeconstruction" class="w-full mt-6 bg-violet-600 hover:bg-violet-500 text-white font-bold py-4 rounded-2xl transition-all transform hover:scale-[1.02] orbitron tracking-widest">
                     BEGIN DECONSTRUCTION
                 </button>
             </div>
         </div>
 
-        <div id="phase2" class="hidden max-w-3xl mx-auto text-center py-12">
-            <div class="inline-block animate-spin rounded-full h-12 w-12 border-t-2 border-violet-500 mb-6"></div>
-            <h2 class="orbitron text-xl font-bold mb-2 uppercase tracking-widest">Scanning Neural Patterns</h2>
-            <p id="typingOutput" class="text-violet-400 font-mono text-sm italic"></p>
+        <div id="phase2" class="hidden max-w-3xl mx-auto text-center space-y-8">
+            <div class="bg-black/40 p-12 rounded-3xl border border-violet-500/30">
+                <div class="inline-block animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-violet-500 mb-6"></div>
+                <h2 class="orbitron text-2xl font-bold mb-2 uppercase">Analyzing Neural Patterns</h2>
+                <p id="typingOutput" class="text-violet-400 font-mono italic"></p>
+            </div>
         </div>
 
-        <div id="phase3" class="hidden max-w-3xl mx-auto text-center py-12">
-            <h2 class="orbitron text-xl font-bold mb-6 italic text-violet-200 uppercase tracking-widest">Installing Protocols</h2>
-            <div class="w-full bg-slate-800 rounded-full h-2 mb-4 overflow-hidden">
-                <div id="installBar" class="bg-gradient-to-r from-violet-600 to-fuchsia-500 h-full w-0 transition-all duration-300"></div>
+        <div id="phase3" class="hidden max-w-3xl mx-auto text-center space-y-8">
+            <div class="bg-black/40 p-12 rounded-3xl border border-violet-500/30">
+                <h2 class="orbitron text-2xl font-bold mb-6 italic text-violet-200 uppercase">Installing Core Protocols</h2>
+                <div class="w-full bg-slate-800 rounded-full h-4 mb-4 overflow-hidden">
+                    <div id="installBar" class="bg-gradient-to-r from-violet-600 to-fuchsia-500 h-full w-0 transition-all duration-300"></div>
+                </div>
+                <p id="installPercent" class="orbitron text-xl font-bold text-violet-400">0%</p>
             </div>
-            <p id="installPercent" class="orbitron text-lg font-bold text-violet-400">0%</p>
         </div>
 
         <div id="phase4" class="hidden space-y-8">
-            <div id="blueprintCapture" class="grid grid-cols-1 lg:grid-cols-2 gap-6 bg-black/20 p-6 rounded-3xl">
-                <div class="lg:col-span-2 bg-gradient-to-r from-violet-900/30 to-indigo-900/30 p-8 rounded-3xl border border-violet-500/20 text-center">
-                    <h2 class="orbitron text-xl font-bold mb-4 text-violet-300 uppercase tracking-widest">Identity Architecture</h2>
-                    <div id="selfImageList" class="space-y-2"></div>
+            <div id="blueprintCapture" class="grid grid-cols-1 lg:grid-cols-2 gap-8 bg-black/20 p-6 rounded-3xl">
+                <div class="lg:col-span-2 bg-gradient-to-r from-violet-900/40 to-indigo-900/40 p-8 rounded-3xl border border-violet-500/30">
+                    <h2 class="orbitron text-2xl font-bold mb-4 text-violet-300 text-center uppercase tracking-tighter">Master Identity Architecture</h2>
+                    <div id="selfImageList" class="space-y-3"></div>
                 </div>
 
-                <div class="bg-slate-900/40 p-6 rounded-3xl border border-violet-500/10">
-                    <h3 class="orbitron text-sm font-bold text-violet-400 mb-4 tracking-widest uppercase italic">Neural Logic</h3>
-                    <div id="thoughtList" class="space-y-3"></div>
+                <div class="bg-slate-900/60 p-6 rounded-3xl border border-violet-500/20">
+                    <h3 class="orbitron font-bold text-violet-400 mb-4 flex items-center">🧠 NEURAL LOGIC</h3>
+                    <div id="thoughtList" class="space-y-4"></div>
                 </div>
 
-                <div class="bg-slate-900/40 p-6 rounded-3xl border border-violet-500/10">
-                    <h3 class="orbitron text-sm font-bold text-emerald-400 mb-4 tracking-widest uppercase italic">Behavior Map</h3>
-                    <div id="behaviorList" class="space-y-3"></div>
+                <div class="bg-slate-900/60 p-6 rounded-3xl border border-violet-500/20">
+                    <h3 class="orbitron font-bold text-emerald-400 mb-4 flex items-center">⚡ BEHAVIOR MAP</h3>
+                    <div id="behaviorList" class="space-y-4"></div>
                 </div>
 
-                <div class="lg:col-span-2 bg-gradient-to-r from-red-900/20 to-orange-900/20 p-6 rounded-3xl border border-red-500/10">
-                    <h3 class="orbitron text-sm font-bold text-center text-red-300 mb-4 tracking-widest uppercase">System Risk Mitigation</h3>
+                <div class="lg:col-span-2 bg-gradient-to-r from-red-900/30 to-orange-900/30 p-8 rounded-3xl border border-red-500/20">
+                    <h3 class="orbitron font-bold text-center text-red-300 mb-6 uppercase">System Risk Mitigation</h3>
                     <div id="riskAssessment" class="grid grid-cols-1 md:grid-cols-3 gap-4"></div>
                 </div>
 
-                <div class="lg:col-span-2 bg-slate-900/40 p-6 rounded-3xl border border-violet-500/10 text-center">
-                    <h3 class="orbitron text-sm font-bold text-violet-400 mb-4 uppercase tracking-widest">Execution Protocol</h3>
-                    <div id="actionSteps" class="grid md:grid-cols-3 gap-4"></div>
+                <div class="lg:col-span-2 bg-slate-900/60 p-6 rounded-3xl border border-violet-500/20 text-center">
+                    <h3 class="orbitron font-bold text-violet-400 mb-6 uppercase">Immediate Execution Protocol</h3>
+                    <div id="actionSteps" class="grid md:grid-cols-3 gap-6"></div>
                 </div>
             </div>
 
-            <div class="max-w-2xl mx-auto bg-black/40 p-8 rounded-3xl border border-violet-500/30 shadow-2xl mt-12">
-                <h3 class="orbitron text-sm font-bold text-violet-300 mb-6 text-center tracking-widest uppercase italic">Secure Connection for Professional Review</h3>
+            <div class="max-w-2xl mx-auto bg-black/40 p-8 rounded-3xl border border-violet-500/30 shadow-2xl mt-8">
+                <h3 class="orbitron text-lg font-bold text-violet-300 mb-4 text-center italic">SECURE CONNECTION FOR REVIEW</h3>
                 <div class="space-y-4">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <input type="text" id="firstName" placeholder="First Name" class="bg-slate-900/60 border border-violet-500/20 rounded-xl p-4 outline-none focus:border-violet-500 text-white text-sm">
-                        <input type="text" id="lastName" placeholder="Last Name (Req)" class="bg-slate-900/60 border border-violet-500/20 rounded-xl p-4 outline-none focus:border-violet-500 text-white text-sm">
+                        <input type="text" id="lastName" placeholder="Last Name" class="bg-slate-900/60 border border-violet-500/20 rounded-xl p-4 outline-none focus:border-violet-500 text-white text-sm">
                     </div>
-                    <input type="email" id="userEmail" placeholder="Email Address" class="w-full bg-slate-900/60 border border-violet-500/20 rounded-xl p-4 outline-none focus:border-violet-500 text-white text-sm">
-                    <input type="tel" id="userPhone" placeholder="Phone Number" class="w-full bg-slate-900/60 border border-violet-500/20 rounded-xl p-4 outline-none focus:border-violet-500 text-white text-sm">
-                    
-                    <button id="submitToZoho" class="w-full bg-gradient-to-r from-violet-600 to-indigo-600 text-white font-bold py-4 rounded-xl orbitron tracking-widest hover:scale-[1.01] transition-all text-xs">
-                        TRANSMIT DATA TO SCANISTA CRM
-                    </button>
-                </div>
-            </div>
-
-            <div class="flex flex-col md:flex-row justify-center gap-4 mt-8 pb-12">
-                <button id="downloadPDF" class="bg-slate-800 border border-emerald-500/50 text-white font-bold py-3 px-8 rounded-xl transition-all orbitron text-xs">
-                    EXPORT PDF
-                </button>
-                <button id="restart" class="bg-black/40 border border-slate-500/50 text-white font-bold py-3 px-8 rounded-xl transition-all orbitron text-xs">
-                    NEW START
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        const traitLibrary = {
-            litigation: {
-                thoughts: ["I operate with legal precision", "Documentation is my greatest defense", "I anticipate risks before liabilities"],
-                behaviors: ["I record all communications", "I audit contracts carefully", "I consult experts for high-stakes moves"]
-            },
-            technical: {
-                thoughts: ["Systems must be scalable", "Stability and security are priorities", "Simplify complexity always"],
-                behaviors: ["I map architecture first", "I prioritize data integrity", "I document tech stacks clearly"]
-            },
-            executive: {
-                thoughts: ["My time is a high-value asset", "I speak with the authority of results", "Decisiveness is key"],
-                behaviors: ["I set clear availability boundaries", "I lead results-oriented meetings", "I delegate non-expert tasks"]
-            }
-        };
-
-        const riskLibrary = {
-            technical: ["Single point of failure detected", "Scope creep likely", "Legacy system mismatch"],
-            legal: ["Ambiguous contract language", "Weak communication trail", "Regulatory non-compliance"],
-            operational: ["Budget/Goal misalignment", "Insufficient deep work time", "Vendor volatility"]
-        };
-
-        const updateProgress = (s) => {
-            for(let i=1; i<=4; i++) {
-                const el = document.getElementById(`step${i}`);
-                if(el) el.classList.replace(i <= s ? 'bg-slate-800' : 'bg-violet-600', i <= s ? 'bg-violet-600' : 'bg-slate-800');
-            }
-        };
-
-        const shuffle = (a) => a.sort(() => Math.random() - 0.5);
-
-        document.getElementById('startDeconstruction').addEventListener('click', () => {
-            if (!document.getElementById('idealSelf').value) return;
-            document.getElementById('phase1').classList.add('hidden');
-            document.getElementById('phase2').classList.remove('hidden');
-            updateProgress(2);
-            let i = 0;
-            const msgs = ["SCANNING INPUT...", "MAPPING ARCHITECTURE...", "OPTIMIZING PROTOCOLS..."];
-            const int = setInterval(() => {
-                document.getElementById('typingOutput').textContent = msgs[i++];
-                if(i === msgs.length) { clearInterval(int); setTimeout(runInstall, 800); }
-            }, 800);
-        });
-
-        function runInstall() {
-            document.getElementById('phase2').classList.add('hidden');
-            document.getElementById('phase3').classList.remove('hidden');
-            updateProgress(3);
-            let p = 0;
-            const int = setInterval(() => {
-                p += 5;
-                document.getElementById('installBar').style.width = p + '%';
-                document.getElementById('installPercent').textContent = p + '%';
-                if(p >= 100) { clearInterval(int); setTimeout(showFinal, 500); }
-            }, 50);
-        }
-
-        function showFinal() {
-            const input = document.getElementById('idealSelf').value.toLowerCase();
-            document.getElementById('phase3').classList.add('hidden');
-            document.getElementById('phase4').classList.remove('hidden');
-            updateProgress(4);
-
-            let th = ["Focus on ROI", "Systemic thinking", "Long-term strategy"];
-            let bh = ["Audit daily progress", "Optimize workflow", "Verify results"];
-            let cats = ['operational'];
-
-            if(input.match(/legal|law|litigation/)) { th.push(...traitLibrary.litigation.thoughts); bh.push(...traitLibrary.litigation.behaviors); cats.push('legal'); }
-            if(input.match(/tech|code|system/)) { th.push(...traitLibrary.technical.thoughts); bh.push(...traitLibrary.technical.behaviors); cats.push('technical'); }
-
-            const pop = (id, items) => {
-                const el = document.getElementById(id);
-                el.innerHTML = '';
-                items.forEach((item) => {
-                    const d = document.createElement('div');
-                    d.className = 'bg-slate-800/40 p-3 rounded-lg border border-violet-500/10 text-xs install-animation';
-                    d.innerHTML = `<span class="text-violet-500 mr-2">›</span>${item}`;
-                    el.appendChild(d);
-                });
-            };
-
-            pop('selfImageList', ["The Elite Architect", "Master of Systems", "Strategic Lead"]);
-            pop('thoughtList', shuffle(th).slice(0, 5));
-            pop('behaviorList', shuffle(bh).slice(0, 5));
-
-            const rc = document.getElementById('riskAssessment');
-            rc.innerHTML = '';
-            cats.forEach(c => riskLibrary[c].forEach(r => {
-                const d = document.createElement('div');
-                d.className = 'bg-black/40 border border-red-500/20 p-3 text-[10px] rounded-lg install-animation';
-                d.innerHTML = `<b class="text-red-400 block uppercase mb-1">${c}</b>${r}`;
-                rc.appendChild(d);
-            }));
-
-            const ac = document.getElementById('actionSteps');
-            ac.innerHTML = '';
-            ["Morning Audit", "Deep Work Block", "Evening Review"].forEach(t => {
-                const d = document.createElement('div');
-                d.className = 'bg-violet-900/20 border border-violet-500/20 p-4 rounded-xl install-animation';
-                d.innerHTML = `<b class="text-violet-400 block mb-1 uppercase text-[10px] tracking-widest">${t}</b><p class="text-[10px] text-gray-400 italic">Execute mission critical tasks.</p>`;
-                ac.appendChild(d);
-            });
-        }
-
-        // --- ZOHO CRM INTEGRATION LOGIC ---
-        document.getElementById('submitToZoho').addEventListener('click', function() {
-            const btn = this;
-            const fName = document.getElementById('firstName').value;
-            const lName = document.getElementById('lastName').value;
-            const email = document.getElementById('userEmail').value;
-            const phone = document.getElementById('userPhone').value;
-            const architecture = document.getElementById('idealSelf').value;
-            
-            if(!lName || !email) return alert("Last Name and Email are required for Zoho CRM.");
-            
-            const formData = new FormData();
-            
-            // SECURITY IDS FROM SOURCE CODE
-            formData.append('xnQsjsdp', 'c4ee060b620ceb231f675b28bf46b57ee52a376584d28344e38d66a564f5d1f3'); 
-            formData.append('xmIwtLD', 'f94e5521c34ff9683b4279a0f7d01f6d423fc8bda72d3b891a065a75e414ac83436a8934aaf10e0c6eaf1fa753787c70');
-            formData.append('actionType', 'TGVhZHM='); 
-
-            // DATA MAPPING
-            formData.append('First Name', fName);
-            formData.append('Last Name', lName);
-            formData.append('Email', email);
-            formData.append('Phone', phone);
-            formData.append('Company', 'Scanista User'); // Default company field
-            formData.append('Description', `IDENTITY ARCHITECTURE SUBMISSION: ${architecture}`);
-
-            btn.textContent = "TRANSMITTING TO SCANISTA...";
-            btn.disabled = true;
-
-            // Submit to Zoho CRM Web-to-Lead
-            fetch('https://crm.zoho.com/crm/WebToLeadForm', {
-                method: 'POST',
-                body: formData,
-                mode: 'no-cors' 
-            }).then(() => {
-                alert("Protocol Successful. Identity data transmitted to Scanista CRM.");
-                location.reload();
-            }).catch(err => {
-                alert("An error occurred during transmission.");
-                btn.disabled = false;
-                btn.textContent = "TRANSMIT DATA TO SCANISTA CRM";
-            });
-        });
-
-        document.getElementById('downloadPDF').addEventListener('click', () => {
-            html2pdf().from(document.getElementById('blueprintCapture')).save('Scanista-Identity-Blueprint.pdf');
-        });
-        document.getElementById('restart').addEventListener('click', () => location.reload());
-    </script>
-</body>
-</html>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <input type="
